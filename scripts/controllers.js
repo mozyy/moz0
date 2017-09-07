@@ -17,6 +17,9 @@ angular.module('Controllers', [])
 	}).then(function (response) {
 		$scope.vols = response.data;
 	});
+	var navAs = angular.element(document.querySelectorAll('.page a'));
+	navAs.removeClass('current');
+	navAs.eq(0).addClass('current');
 }])
 
 // 推荐控制器
