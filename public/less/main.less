@@ -1,0 +1,39 @@
+
+// 初始化
+@import "base.less";
+//头部
+@import "header.less";
+
+// 底部
+@import "footer.less";
+
+
+// section
+
+.vol-list {
+	margin-left: 160px;
+	.item {
+		width: 642px;
+		background-color: @background-color;
+		border-radius: 5px;
+		margin-bottom: 50px;
+		overflow: hidden;
+		.msg {
+			line-height: 40px;
+			padding: 0 20px;
+			.name {
+				display: inline-block;
+				&:hover {
+					color: @theme-color;
+				}
+			}
+			span {
+				float: right;
+				margin-left: 25px;
+				.icon {
+					color: @theme-color;
+				}
+			}
+		}
+	}
+}

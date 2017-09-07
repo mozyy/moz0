@@ -1,0 +1,25 @@
+	
+<!-- vol-list -->
+	<div class="vol-list">
+		<div class="item" ng-repeat="vol in vols">
+			<a ng-href="{{vol.href}}" class="cover-wrapper" ng-title="{{vol.title}}">
+				<img ng-src="{{vol.imgSrc}}" ng-alt="{{vol.title}}" class="cover rounded">
+			</a>
+			<div class="msg">
+				<a ng-href="{{vol.href}}" class="name" ng-title="{{vol.title}}">vol.{{vol.volIndex}} {{vol.title}}</a>
+				<span class="comments">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-comment"></use>
+					</svg>
+					{{vol.comments}}
+				</span>
+				<span class="favs">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-love"></use>
+					</svg>
+					{{vol.favs}}
+				</span>
+			</div>
+		</div>
+	</div>
+<!-- vol-list end-->

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Keywords" content="moz0,杨跃,末指,末指之城">
+	<meta name="Description" content="你说你那里在下雨，我都不敢问你带没带伞，怕你说没带，而我却没有办法给你送去。-- moz0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" > -->
+	<title>moz0-杨跃</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<script src="./public/fonts/iconfont.js"></script>
+	<link rel="stylesheet/less" type="text/css" href="public/less/main.less">
+	<script src="public/libs/less.js"></script>
+</head>
+<body ng-app="moz0">
+	<!-- header 开始 -->
+	<header>
+		<div class="w">
+			<h1><a href="http://www.moz0.com/#/">moz0</a></h1>
+			<nav>
+				<ul>
+					<li class="page"><a href="#!" class="current">首 页</a></li>
+					<li class="page"><a href="#!/recommend">推 荐</a></li>
+					<li class="page"><a href="#!/about">关 于</a></li>
+					<li class="wechat">
+						<a href="javascript:void(0)">微信公众号</a>
+						<div class="qrcode">
+							<img src="./public/images/qrcode.jpg" alt="">
+						</div>
+					</li>
+					<li class="sear">
+						<input class="search" type="text" placeholder="请输入内容">
+						<svg class="icon" aria-hidden="true">
+  							<use xlink:href="#icon-search"></use>
+						</svg>
+					</li>
+				</ul>
+			</nav>
+			<div class="login">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-login"></use>
+				</svg>
+				<span>登录/注册</span>
+			</div>
+		</div>
+	</header>
+	<!-- header 结束 -->
+
+	<!-- section 开始 -->
+	<section class="w">
+		<div ng-view></div>
+	</section>
+	<!-- section 结束 -->
+
+	<!-- footer 开始 -->
+	<footer>
+		<div class="w footer">
+			<dl>
+				<dt>关于</dt>
+				<dd><a href="javascript:void(0)">了解moz0</a></dd>
+				<dd><a href="javascript:void(0)">加入moz0</a></dd>
+				<dd><a href="javascript:void(0)">联系我们</a></dd>
+				<dd><a href="javascript:void(0)">反馈建议</a></dd>
+				<dd><a href="javascript:void(0)">友情链接</a></dd>
+			</dl>
+			<div class="sns">
+				<p>关注moz0</p>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-qq"></use>
+				</svg>
+				<svg class="icon qricon" aria-hidden="true">
+					<use xlink:href="#icon-wechat"></use>
+				</svg>
+				<div class="footer-qrcode">
+					<img src="public/images/qrcode.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer 结束 -->
+
+	<!-- 引入angular和angular-route插件 -->
+	<script src="./bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<!-- angularJS入口 -->
+	<script src="scripts/app.js"></script>
+	<!-- controller插件 -->
+	<script src="scripts/controllers.js"></script>
+</body>
+</html>

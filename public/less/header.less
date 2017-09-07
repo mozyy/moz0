@@ -1,0 +1,98 @@
+@body-color: #f8f8f8;
+@background-color: #eee;
+@theme-color: #f00;
+@border-color: #ccc;
+
+// iconfont
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+
+header {
+	height: 61px;
+	border-top: 2px solid @theme-color;
+	border-bottom: 2px solid @border-color;
+	background-color: @background-color;
+	margin-bottom: 60px;
+	div {
+		h1 {
+			float: left;
+			a {
+				width: 100px;
+				height: 61px;
+				display: inline-block;
+				text-indent: -5000px;
+				background: url("../images/logo.png") no-repeat;
+			}
+		}
+		nav {
+			display: inline-block;
+			margin-left: 60px;
+			ul li{
+				float: left;
+				a {
+					text-align: center;
+					height: 61px;
+					width: 110px;
+					box-sizing: border-box;
+					font: 700 20px/61px "microsoft yahei";
+					&:hover {
+						color: #f00;
+						border-bottom: 5px solid @theme-color;
+					}
+					&.current {
+						color: #f00;
+						border-bottom: 5px solid @theme-color;
+					}
+				}
+				&.wechat {
+					position: relative;
+					.qrcode {
+						display: none;
+						width: 215px;
+						height: 215px;
+						position: absolute;
+						top: 61px;
+						left: -50%;
+					}
+					&:hover .qrcode {
+						display: block;
+					}
+				}
+				&.sear {
+					position: relative;
+					.search {
+						height: 22px;
+						width: 130px;
+						margin-top: 19px;
+						text-indent: 24px;
+						border: 1px solid @border-color;
+						border-radius: 11px;
+						background-color: #e6e6e6;
+						transition: 0.6s;
+						&:focus {
+							width: 200px;
+							background-color: @body-color;
+						}
+					}
+					.icon {
+						position: absolute;
+						top: 24px;
+						left: 5px;
+						color: @border-color - 80;
+					}				
+				}
+
+			}
+		}
+		.login {
+			cursor: pointer;
+			float: right;
+			line-height: 61px;
+		}
+	}
+
+}
