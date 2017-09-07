@@ -9,11 +9,11 @@ moz0.config(['$routeProvider', function ($routeProvider) {
 	})
 	.when('/recommend', {
 		templateUrl: './views/recommend.html',
-		controller: 'RecommendContorller'
+		controller: 'RecommendController'
 	})
 	.when('/about', {
 		templateUrl: './views/about.html',
-		controller: 'AboutContorller'
+		controller: 'AboutController'
 	})
 	.otherwise({
 		redirectTo: '/'
@@ -22,16 +22,10 @@ moz0.config(['$routeProvider', function ($routeProvider) {
 
 moz0.run(['$rootScope', '$http', function ($rootScope, $http) {
 
-	$rootScope.demo = function (){
-		// $http({
-		// 	method: 'get',
-		// 	url: './public/php/moz0.php',
-		// 	params: {
-		// 		user: 1
-		// 	}
-		// }).then(function (response) {
-		// 	// document.querySelector('.login').innerHTML += response.data;
-		// })
-		console.log(1);
-	}
+	var navAs = angular.element(document.querySelectorAll('.page a'));
+	navAs.on('click', function(){
+		navAs.removeClass('current');
+		angular.element(this).addClass('current');
+		console.log(this);
+	})
 }])

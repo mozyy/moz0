@@ -21,10 +21,14 @@ angular.module('Controllers', [])
 
 // 推荐控制器
 .controller('RecommendController', ['$scope', function ($scope) {
-	$scope.name = 'Reconc';
+	var navAs = angular.element(document.querySelectorAll('.page a'));
+	navAs.removeClass('current');
+	navAs.eq(1).addClass('current');
 }])
 
 // 关于控制器
 .controller('AboutController', ['$scope', function ($scope) {
-	$scope.about = '杨跃';
+	var navAs = angular.element(document.querySelectorAll('.page a'));
+	navAs.removeClass('current');
+	navAs.eq(2).addClass('current');
 }])
