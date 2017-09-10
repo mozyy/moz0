@@ -1,0 +1,19 @@
+{
+  "name": "moz0",
+  "homepage": "https://github.com/mozyy/moz0",
+  "authors": [
+    "mozyy <yy@moz0.com>"
+  ],
+  "description": "mymoz0",
+  "main": "index.html",
+  "keywords": [
+    "moz0"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular-route": "^1.6.6"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
