@@ -49,6 +49,11 @@ gulp.task('other', function (){
 gulp.task('rev', ['css', 'image', 'useref'], function (){
 	return gulp.src(['./release/rev/*.json', './release/index.html'])
 			.pipe(revCollector())
-			.pipe(gulp.dest('./release'))
+			.pipe(gulp.dest('./release'));
+});
+gulp.task('rev2', function (){
+	return gulp.src(['./release/rev/*.json', './release/public/css/*.css'], {base: './release/'})
+			.pipe(revCollector({replaceReved: true}))
+			.pipe(gulp.dest('./release'));
 });
 gulp.task('default', ['rev', 'other']);
